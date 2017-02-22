@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Details</title>
+	<script type="text/javascript">
+	function getName(t1,t2)
+	{	var rollNo = t1.value
+		
+		if(rollNo>132||rollNo<0)
+			alert("Invalid Roll Number")
+
+		var list = [
+			
+			{number: '0', name: 'None'},//Without this at index 0, rollno indexing wont work properly 
+			{number: '1', name: 'Gawda Mahesh'},
+			{number: '2', name: 'Lone Kaushal'},
+			{number: '3', name: 'Gajengi Saritha'},
+			{number: '4', name: 'Bhangale Mayuri'},
+			{number: '5', name: 'Ghewade Pranita'},
+			{number: '6', name: 'Bhopatrao Shrushti'},
+			{number: '7', name: 'Pargai Manisha'},
+			{number: '8', name: 'Medhekar Nikhil'},
+			{number: '9', name: 'Jaiswar Rajesh'},
+			{number: '10', name: 'Jogale Mayur'},
+			{number: '11', name: 'Kumavat Ashutosh'},
+			{number: '12', name: 'Left'},
+			{number: '13', name: 'Rankhambe Aniket'},
+			{number: '14', name: 'Shinde Komal'},
+			{number: '15', name: 'Maurya Deepak'},
+			{number: '16', name: 'Jaiswal Suraj'},
+			{number: '17', name: 'Singh Mahima'},
+			{number: '18', name: 'Kumbhar Niraj'},
+			{number: '19', name: 'Bhairi Swapna'},
+			{number: '20', name: 'Left'},
+			{number: '21', name: 'Khan Salman'},
+			{number: '22', name: 'Thakur Kalpesh'},
+			{number: '23', name: 'Sonawane Rohan'},
+			{number: '24', name: 'Left'},
+			{number: '25', name: 'Bhala Namrata'},
+			{number: '26', name: 'Iyer Rajalakshmi'},
+			{number: '27', name: 'Jadhav Ruchita'},
+			{number: '28', name: 'Singh Satyarth'},
+			{number: '29', name: 'Saware Gaurav'},
+			{number: '30', name: 'Left'},
+			{number: '31', name: 'Jhondelekar Shweta'},
+			{number: '32', name: 'Ballal Tejas'},
+			{number: '33', name: 'Pandey Ashwini'},
+			{number: '34', name: 'Jawale Mayuresh'},
+			{number: '35', name: 'Warke Mayuri'},
+			{number: '36', name: 'Yadav Jyoti'},
+			{number: '37', name: 'Waingankar Pradnya'},
+			{number: '38', name: 'Tiwari Mohini'},
+			{number: '39', name: 'Chandraprakash C'},
+			{number: '40', name: 'Fawade Omkar'},
+			{number: '41', name: 'Kumbhare Mayur'},
+			{number: '42', name: 'Pandey Prashant'},
+			{number: '43', name: 'Jagatap Pradip'},
+			{number: '44', name: 'Left'},
+			{number: '45', name: 'Bagore Shlok'},
+			{number: '46', name: 'Sharma Savita'},
+			{number: '47', name: 'Pansare Saurabh'},
+			{number: '48', name: 'Left'},
+			{number: '49', name: 'Left'},
+			{number: '50', name: 'Singh Toshita'},
+			{number: '51', name: 'Adke Priyanka'},
+			{number: '52', name: 'Kadam Sanket'},
+			{number: '53', name: 'Kapoor Rajiv'},
+			{number: '54', name: 'Kaveri Saurabh'},
+			{number: '55', name: 'Gaikwad Shivani'},
+			{number: '56', name: 'Pawar Pratiksha'},
+			{number: '57', name: 'Pawar Raj'},
+			{number: '58', name: 'Tembhe Sanchita'},
+			{number: '59', name: 'Kamble Shruti'},
+			{number: '60', name: 'Bedse Rohan'},
+			{number: '61', name: 'Left'},
+			{number: '62', name: 'Chavan Mohan'},
+			{number: '63', name: 'Kangane Sangam'},
+			{number: '64', name: 'Muddaliyar Priyanka'},
+			{number: '65', name: 'Nair Vaishnavi'},
+			{number: '66', name: 'Gaikwad Shalaka'},
+			{number: '67', name: 'Khan Aakil'},
+			{number: '68', name: 'Krishna Kishor T'},
+			{number: '69', name: 'Singh Ranapratap'},
+			{number: '70', name: 'Mhatre Ankit'},
+			{number: '71', name: 'Kewat Ritu'},
+			{number: '72', name: 'Gode Omkar'},
+			{number: '73', name: 'Navalgi Sandeep'},
+			{number: '74', name: 'Goswami Gaurav'},
+			{number: '75', name: 'Tiwari Shubham'},
+			{number: '76', name: 'Tayade Aakash'},
+			{number: '77', name: 'Chauhan Pankaj'},
+			{number: '78', name: 'Dongre Shruti'},
+			{number: '79', name: 'Gadge Shivani'},
+			{number: '80', name: 'Yadav Karan'},
+			{number: '81', name: 'Yadav Ratnakar'},
+			{number: '82', name: 'Mundhe Ankita'},
+			{number: '83', name: 'Left'},
+			{number: '84', name: 'Shirke Mayuresh'},
+			{number: '85', name: 'Pandey Shashank'},
+			{number: '86', name: 'Jadhav Deepeksha'},
+			{number: '87', name: 'Mishra Nilima'},
+			{number: '88', name: 'Pandey Karan'},
+			{number: '89', name: 'Gavhane Lalit'},
+			{number: '90', name: 'Singh Vikas'},
+			{number: '91', name: 'Jhondale Rohit'},
+			{number: '92', name: 'Nandi Soumik'},
+			{number: '93', name: 'Jadhav Palavi'},
+			{number: '94', name: 'Shirsath Shreya'},
+			{number: '95', name: 'Jadhav Vaibhav'},
+			{number: '96', name: 'Dube Neha'},
+			{number: '97', name: 'Yewale Aniket'},
+			{number: '98', name: 'Nikam Yashwant'},
+			{number: '99', name: 'Amandeep K'},
+			{number: '100', name: 'Pal Rohit'},
+			{number: '101', name: 'Bhasvar Janhavi'},
+			{number: '102', name: 'Vikram Cothur'},
+			{number: '103', name: 'Rao Mayank'},
+			{number: '104', name: 'Rangeele Kishan'},
+			{number: '105', name: 'Left'},
+			{number: '106', name: 'Jadhav Agnes'},
+			{number: '107', name: 'Parande Nilam'},
+			{number: '108', name: 'Patil Amit'},
+			{number: '109', name: 'Gupta Prem'},
+			{number: '110', name: 'Jha Vikaskumar'},
+			{number: '111', name: 'Left'},
+			{number: '112', name: 'Yadav Prem'},
+			{number: '113', name: 'More Shubham'},
+			{number: '114', name: 'Left'},
+			{number: '115', name: 'Left'},
+			{number: '116', name: 'Shinde Nisha'},
+			{number: '117', name: 'Left'},
+			{number: '118', name: 'Shah Zil'},
+			{number: '119', name: 'Shukla Anand'},
+			{number: '120', name: 'Marathe Rupesh'},
+			{number: '121', name: 'Rajbhar Anil'},
+			{number: '122', name: 'Vishwakarma Laxmi'},
+			{number: '123', name: 'Left'},
+			{number: '124', name: 'Left'},
+			{number: '125', name: 'Left'},
+			{number: '126', name: 'Vishwakarma Rahul'},
+			{number: '127', name: 'Tiwari Bhagyashree'},
+			{number: '128', name: 'Left'},
+			{number: '129', name: 'Left'},
+			{number: '130', name: 'Left'},
+			{number: '131', name: 'Nikam Poonam'},
+			{number: '132', name: 'Shaikh Nazeha'}
+			
+
+		]
+		t2.value = list[rollNo].name
+	}
+	</script>
+</head>
+<body>
+<table>
+<form>
+<tr>
+<td>
+	<input type="text" style="color: #C0C0C0;" value="Roll No" 
+    onfocus="this.value=''; this.style.color='#00C000'" name = "t1">
+</td>
+<td>
+	<input type="button" value="Get name" onclick="getName(t1,t2)">
+</td>
+</tr>
+<tr>
+<td>
+	<input type = "text" name="t2">
+</td>
+</tr>
+</form>
+</table>
+</body>
+</html>

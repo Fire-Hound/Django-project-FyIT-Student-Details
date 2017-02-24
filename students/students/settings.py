@@ -54,7 +54,7 @@ ROOT_URLCONF = 'students.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["/home/plexis/Desktop/FyBscIT/students/details/det.html"],
+        'DIRS': [BASE_DIR + "/details/det.html"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
